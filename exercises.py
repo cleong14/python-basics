@@ -7,17 +7,29 @@
 
 #example
 greeting = 'Hello Prepster'
-print(greeting); #this should print 'Hello Prepster'
+print(greeting) #this should print 'Hello Prepster'
 
 #1 Variables with a String value
 #Declare variables named first_name, last_name, birth_place, hobby, role_model, famous_quote, fav_president, fav_food, fav_color, fav_song
 
 #Assign your own string values to each variable and print each variable.
+first_name = 'Chaz'
+last_name = 'Leong'
+birth_place = 'Honolulu, HI'
+hobby = 'Coding and working out'
+role_model = 'You!'
+famous_quote = 'souuuuuwooooop'
+fav_president = 'not trump'
+fav_food = 'french fries'
+fav_color = 'black'
+fav_song = 'milk and cereal'
 
+print(first_name)
 
 #2 String Concatenation
 #Declare a variable named full_name and concatenate first_name and last_name. Print the full_name variable.
-
+full_name = first_name + ' ' + last_name
+print(full_name)
 
 #Declare a variable named intro that creates the following sentence:
 #'Hello, my name is x and I was born in y.' Where x is full_name and y is birth_place. Print the intro variable.
@@ -30,18 +42,21 @@ print(greeting); #this should print 'Hello Prepster'
 #3 Spacing with tabs and newlines
 #Declare a variable named my_hero that the following sentence using a tab:
 #'My hero is x and his famous quote is y.' Where x is role_model and y is famous_quote. Print the my_hero variable.
-
+my_hero = 'My hero is me and \nmy famous quote is souuu\twoop'
+print(my_hero)
 
 #Declare a variable named my_favs that creates the following sentence and returns a new line after each numbered item. 
 #'This is what I like: 1. hobby 2. fav_color 3. fav_song
 #Print the my_favs variable.
-
+my_favs = 'This is what I like: \n1. hobby \n2. fav_color \n3. fav_song'
+print(my_favs)
 
 #4 Variables with a Number value
 #Declare variables named age, weight, shoe_size, fav_number, yen_rate, bitcoin_value, todays_temperature, hawaii_popuation, countries_traveled, number_of_siblings
 
 #Assign your own number values to each variable and print each variable.
-
+age = 29
+print(age)
 
 #5 Number as Strings Concatenation
 #Declare a variable named self_intro that creates the following sentence:
@@ -58,7 +73,8 @@ print(greeting); #this should print 'Hello Prepster'
 
 #6 Variables with a List value
 #Declare a variable named fab_five and assign it a list containing five of your all time favorite snacks. Print the fab_five variable.
-
+fab_five = ['french fries', 'chips', 'pizza', 'ramen', 'pho']
+print(fab_five)
 
 #Declare a variable named plate_lunch and assign it a list containing five of your favorite lunch items. Print the plate_lunch variable.
 
@@ -89,19 +105,29 @@ print(greeting); #this should print 'Hello Prepster'
 vics_list = ['Hendricks gin', 'Fever Tree tonic', 'Costco pub mix', 'cool ranch doritos', 'oreos', 'Safeway fried chicken', 'Morning Glass coffee']
 
 #Print the entire list.
+print(vics_list)
 
 #Print the length of the list.
+print(len(vics_list))
 
 #Print only the first element in the list.
-
+print(vics_list[0])
 #Print only the last element in the list.
+print(vics_list[len(vics_list) - 1])
 
 #Print 'Safeway fried chicken'
+for item in vics_list:
+  if(item == 'Safeway fried chicken'):
+    print(item)
 
 #Replace 'cool ranch doritos' with 'carrot cake' and print the list.
+for i, item in enumerate(vics_list):
+  if(item == 'cool ranch doritos'):
+    vics_list[i] = 'carrot cake'
+print(vics_list)
 
 #Print the last element in the list using -1
-
+print(vics_list[len(vics_list) - 1])
 
 #8 Variables with a Dictionary value
 #Declare a variable named car and create the following key-value pairs:
@@ -113,7 +139,13 @@ vics_list = ['Hendricks gin', 'Fever Tree tonic', 'Costco pub mix', 'cool ranch 
 # - key: features list value: moon roof, leather seats, iphone docker
 
 #Print the car variable.
-
+car = {
+  'brand': 'Subaru',
+  'model': 'STI',
+  'color': 'White',
+  'features': 'Fast'
+}
+print(car)
 
 #Declare a variable named footwear and create the following key-value pairs:
 # - key: brand string value: Vivo Barefoot,
@@ -148,7 +180,15 @@ vics_list = ['Hendricks gin', 'Fever Tree tonic', 'Costco pub mix', 'cool ranch 
 # - key: highest_revenue string value: Ala Moana Center Food Court
 
 #Print the pandas variable.
+pandas = {}
+pandas['name'] = 'pandas express'
+pandas.update({'restaurant number': 2000})
+pandas.update(cuisine = 'chinese')
+pandas.update({
+  'menu': ['orange chicken', 'walnut shrimp']
+})
 
+print(pandas)
 
 #Declare a variable named bucket_list and assign it to an EMPTY dictionary.
 #You will add the following key-value pairs:
@@ -165,26 +205,46 @@ vics_list = ['Hendricks gin', 'Fever Tree tonic', 'Costco pub mix', 'cool ranch 
 #Declare a variable named bruce_bio and assign a tuple containing the following values: Bruce Lee, male, 32, San Francisco, [Kung-Fu Master, actor, philosopher]
 
 #Print the bruce_bio variable.
-
+bruce_bio = ('bruce lee', 'male', 32, ['kung-fu master', 'actor'])
+print(bruce_bio)
 
 #Declare a variable named movies and assign a tuple containing the following values: [The Big Boss, 1971],[Fist of Fury, 1972], [The Way of the Dragon, 1972], [The Game of Death, 1972]
 
 #Print the movies variable.
-
+movies = (['the big boss', 1971], ['fist of fury', 1972])
+print(movies)
 
 #Declare a variable named updated_bio and add the bruce_bio and movies tuples together. Print the updated_bio variable.
-
+updated_bio = bruce_bio + movies
+print(updated_bio)
 
 #Print the following values:
 #The length of the updated_bio tuple
+print(len(updated_bio))
 
 #Bruce Lee
+print(updated_bio[0])
 
 #Index position 1
+for i, item in enumerate(updated_bio):
+  if(i == 1):
+    print('I',updated_bio[i])
 
 #['Game of Death', 1972]
+for i, item in enumerate(updated_bio):
+  if(item == ['kung-fu master', 'actor']):
+    print('ITEM', item)
 
 #philosopher
+print('UPDATED BIO', updated_bio)
+print('UPDATED BIO LENGTH', len(updated_bio))
+for item in updated_bio:
+  # print('EACH ITEM', item)
+  if(type(item) is list):
+    for list_item in item:
+      # print('LIST ITEM', list_item)
+      if(list_item == 'actor'):
+        print(list_item)
 
 #1971
 
